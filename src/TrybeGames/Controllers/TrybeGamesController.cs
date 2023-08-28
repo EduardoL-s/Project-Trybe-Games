@@ -127,8 +127,6 @@ public class TrybeGamesController
         {
             Id = database.Players.Count + 1,
             Name = Console.ReadLine(),
-            FavoriteGameStudios = new List<int>(),
-            GamesOwned = new List<int>()
         };
 
         database.Players.Add(newPlayer);
@@ -138,7 +136,15 @@ public class TrybeGamesController
     public void AddGameStudio()
     {
         // implementar
-        Console.WriteLine("Ainda não é possível realizar essa funcionalidade!");
+        Console.WriteLine("Insira o nome da GameStudio:");
+
+        GameStudio newGameStudio = new GameStudio
+        {
+            Id = database.GameStudios.Count + 1,
+            Name = Console.ReadLine()
+        };
+
+        database.GameStudios.Add(newGameStudio);
     }
 
     // 3. Crie a funcionalidade de adicionar novo Jogo ao Banco de dados
